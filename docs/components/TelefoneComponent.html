@@ -92,6 +92,9 @@
                                     <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/HoraComponent.html" >HoraComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html"  class="active" >TelefoneComponent</a>
                                 </li>
                         </ul>
@@ -116,6 +119,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -266,6 +272,9 @@
                                            <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/HoraComponent.html" >HoraComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html"  class="active" >TelefoneComponent</a>
                                        </li>
                                </ul>
@@ -290,6 +299,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -625,8 +637,8 @@ export class TelefoneComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><input class="form-control" type="text" maxlength="16"       [placeholder]="placeholder"       [ngModel]="value" telefoneMask       (ngModelChange)="notifyChange($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'TelefoneComponent', 'selector': 'telefone'}];
-    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'}];
+    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'TelefoneComponent'};
 </script>
 <script src="../js/tree.js"></script>
