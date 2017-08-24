@@ -17,15 +17,16 @@ import {ValueAccessorBase} from "../value-acessor-base";
 })
 export class TelefoneComponent extends ValueAccessorBase<string> {
 
-  @Input() placeholder: string;
+  @Input() placeholder: string = '(99) 9 9999-9999';
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {
-    value = value ? value.replace(/[^\d]/g, '') : value;
+    value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 11) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
-  public blurEvt(value: string): void {
-    this.blur.next(value);
+  public blurEvt(event): void {
+    this.blur.emit(event);
   }
 }

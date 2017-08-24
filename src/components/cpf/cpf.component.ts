@@ -22,12 +22,13 @@ export class CpfComponent extends ValueAccessorBase<string> {
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {
-    value = value ? value.replace(/[^\d]/g, '') : value;
+    value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 11) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
-  public blurEvt(value: string): void {
-    this.blur.next(value);
+  public blurEvt(event): void {
+    this.blur.emit(event);
   }
 
 }
