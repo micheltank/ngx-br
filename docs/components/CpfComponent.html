@@ -97,6 +97,12 @@
                                 <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/ValidacaoCnpjComponent.html" >ValidacaoCnpjComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ValidacaoCpfComponent.html" >ValidacaoCpfComponent</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -276,6 +282,12 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ValidacaoCnpjComponent.html" >ValidacaoCnpjComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ValidacaoCpfComponent.html" >ValidacaoCpfComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -551,13 +563,13 @@
                                 <span class="modifier-icon method fa fa-play circle">
                                     <span class="fa fa-circle"></span>
                                 </span>
-                            <code>blurEvt(value: string)</code>
+                            <code>blurEvt(event: any)</code>
                         </td>
                     </tr>
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/cpf/cpf.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/cpf/cpf.component.ts:30</a></div>
                             </td>
                         </tr>
     
@@ -602,12 +614,13 @@ export class CpfComponent extends ValueAccessorBase&lt;string&gt; {
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
   notifyChange(value: any) {
-    value &#x3D; value ? value.replace(/[^\d]/g, &#x27;&#x27;) : value;
+    value &#x3D; value ? value.replace(/[^\d]/g, &#x27;&#x27;).trim().slice(0, 11) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
-  public blurEvt(value: string): void {
-    this.blur.next(value);
+  public blurEvt(event): void {
+    this.blur.emit(event);
   }
 
 }
@@ -639,7 +652,7 @@ export class CpfComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><input type="text" class="form-control" maxlength="14"       placeholder="{{placeholder}}"       [ngModel]="value" cpfMask       (ngModelChange)="notifyChange($event)"       (blur)="blurEvt($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'}];
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'validacao-cnpj'},{'name': 'ValidacaoCpfComponent', 'selector': 'validacao-cpf'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'CpfComponent'};
 </script>

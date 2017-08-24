@@ -97,6 +97,12 @@
                                 <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/ValidacaoCnpjComponent.html" >ValidacaoCnpjComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ValidacaoCpfComponent.html" >ValidacaoCpfComponent</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -277,6 +283,12 @@
                                        <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../components/ValidacaoCnpjComponent.html" >ValidacaoCnpjComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ValidacaoCpfComponent.html" >ValidacaoCpfComponent</a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -411,7 +423,13 @@
                                 <a href="../components/CpfComponent.html">CpfComponent</a>
                             </li>
                             <li class="list-group-item">
+                                <a href="../components/ValidacaoCpfComponent.html">ValidacaoCpfComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                 <a href="../components/CnpjComponent.html">CnpjComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../components/ValidacaoCnpjComponent.html">ValidacaoCnpjComponent</a>
                             </li>
                             <li class="list-group-item">
                                 <a href="../components/TelefoneComponent.html">TelefoneComponent</a>
@@ -458,7 +476,13 @@
                                     <a href="../components/CpfComponent.html" >CpfComponent</a>
                             </li>
                             <li class="list-group-item">
+                                    <a href="../components/ValidacaoCpfComponent.html" >ValidacaoCpfComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                     <a href="../components/CnpjComponent.html" >CnpjComponent</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../components/ValidacaoCnpjComponent.html" >ValidacaoCnpjComponent</a>
                             </li>
                             <li class="list-group-item">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
@@ -519,6 +543,8 @@ import {CnpjPipe} from &quot;./pipes/cnpj.pipe&quot;;
 import {EstadosComponent} from &quot;./components/estados/estados.component&quot;;
 import {HoraComponent} from &quot;./components/hora/hora.component&quot;;
 import {HoraMaskDirective} from &quot;./components/hora/hora.mask.directive&quot;;
+import {ValidacaoCpfComponent} from &quot;./components/cpf/cpf.component.validacao&quot;;
+import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.validacao&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
@@ -530,7 +556,9 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
   declarations: [
     // Components
     CpfComponent,
+    ValidacaoCpfComponent,
     CnpjComponent,
+    ValidacaoCnpjComponent,
     TelefoneComponent,
     CepComponent,
     EstadosComponent,
@@ -551,7 +579,9 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
   exports: [
     // Components
     CpfComponent,
+    ValidacaoCpfComponent,
     CnpjComponent,
+    ValidacaoCnpjComponent,
     TelefoneComponent,
     CepComponent,
     EstadosComponent,
