@@ -1,6 +1,6 @@
 {
   "name": "ngx-br",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "",
   "main": "./bundles/ngx-br.umd.js",
   "module": "./index.js",
@@ -111,7 +111,8 @@
     }
   },
   "dependencies": {
-    "ngx-utilities": "0.0.20",
+    "cpf_cnpj": "^0.2.0",
+    "ngx-utilities": "^0.0.25",
     "vanilla-masker": "^1.2.0"
   }
 }
