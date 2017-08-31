@@ -460,7 +460,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input<br>&nbsp;&nbsp;class&#x3D;&quot;form-control&nbsp;text-right&quot;&nbsp;horaMask<br>&nbsp;&nbsp;type&#x3D;&quot;text&quot;<br>&nbsp;&nbsp;maxlength&#x3D;&quot;5&quot;<br>&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input<br>&nbsp;&nbsp;class&#x3D;&quot;form-control&nbsp;text-right&quot;&nbsp;horaMask&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;type&#x3D;&quot;text&quot;<br>&nbsp;&nbsp;maxlength&#x3D;&quot;5&quot;<br>&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;&gt;</code></td>
             </tr>
 
 
@@ -471,6 +471,26 @@
 
     <section>
         <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>id</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>string</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/hora/hora.component.ts:26</a></div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -511,7 +531,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/hora/hora.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/hora/hora.component.ts:28</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -542,7 +562,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/hora/hora.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/hora/hora.component.ts:30</a></div>
                             </td>
                         </tr>
     
@@ -573,7 +593,7 @@ const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
   selector: &#x27;hora&#x27;,
   template: &#x60;
     &lt;input
-      class&#x3D;&quot;form-control text-right&quot; horaMask
+      class&#x3D;&quot;form-control text-right&quot; horaMask id&#x3D;&quot;{{id}}&quot;
       type&#x3D;&quot;text&quot;
       maxlength&#x3D;&quot;5&quot;
       [placeholder]&#x3D;&quot;placeholder&quot;
@@ -588,6 +608,8 @@ const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
 export class HoraComponent extends ValueAccessorBase&lt;string&gt; {
 
   @Input() placeholder: string &#x3D; &#x27;HH:MM&#x27;;
+  @Input() id: string;
+
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
   public blurEvt(event): void {
@@ -628,7 +650,7 @@ export class HoraComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input  class="form-control text-right" horaMask  type="text"  maxlength="5"  [placeholder]="placeholder"  [(ngModel)]="value"  (blur)="blurEvt($event)"></div>'
+        var COMPONENT_TEMPLATE = '<div><input  class="form-control text-right" horaMask id="{{id}}"  type="text"  maxlength="5"  [placeholder]="placeholder"  [(ngModel)]="value"  (blur)="blurEvt($event)"></div>'
     var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'validacao-cnpj'},{'name': 'ValidacaoCpfComponent', 'selector': 'validacao-cpf'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'HoraComponent'};
