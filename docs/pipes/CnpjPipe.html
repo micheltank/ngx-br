@@ -421,9 +421,9 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import {Pipe, PipeTransform} from &quot;@angular/core&quot;;
+import {cnpjPattern} from &quot;../components/constants&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
-const cnpjPattern &#x3D; &#x27;99.999.999/9999-99&#x27;;
 
 @Pipe({
   name: &#x27;cnpj&#x27;

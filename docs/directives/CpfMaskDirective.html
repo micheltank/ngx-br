@@ -497,9 +497,9 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import {Directive, ElementRef} from &quot;@angular/core&quot;;
+import {cpfPattern} from &quot;../constants&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
-
 @Directive({
   selector: &#x27;[cpfMask]&#x27;
 })
@@ -508,7 +508,7 @@ export class CpfMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement &#x3D; this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskPattern(&#x27;999.999.999-99&#x27;);
+    vanillaMasker(this.nativeElement).maskPattern(cpfPattern);
   }
 }
 </code></pre>

@@ -421,9 +421,9 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import {Pipe, PipeTransform} from &quot;@angular/core&quot;;
+import {cpfPattern} from &quot;../components/constants&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
-const cpfPattern &#x3D; &#x27;999.999.999-99&#x27;;
 
 @Pipe({
   name: &#x27;cpf&#x27;

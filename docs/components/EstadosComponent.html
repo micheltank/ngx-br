@@ -460,7 +460,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;select&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;&gt;<br>&nbsp;&nbsp;&lt;option&nbsp;value&#x3D;&quot;&quot;&nbsp;disabled&nbsp;selected&gt;{{placeholder}}&lt;/option&gt;<br>&nbsp;&nbsp;&lt;option&nbsp;*ngFor&#x3D;&quot;let&nbsp;estado&nbsp;of&nbsp;estados&quot;&nbsp;[ngValue]&#x3D;&quot;estado.sigla&quot;&gt;{{estado.descricao}}&lt;/option&gt;<br>&lt;/select&gt;</code></td>
+                <td class="col-md-9"><code>&lt;select&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;&gt;<br>&nbsp;&nbsp;&lt;option&nbsp;value&#x3D;&quot;null&quot;&nbsp;disabled&nbsp;selected&gt;{{placeholder}}&lt;/option&gt;<br>&nbsp;&nbsp;&lt;option&nbsp;*ngFor&#x3D;&quot;let&nbsp;estado&nbsp;of&nbsp;estados&quot;&nbsp;[ngValue]&#x3D;&quot;estado.sigla&quot;&gt;{{estado.descricao}}&lt;/option&gt;<br>&lt;/select&gt;</code></td>
             </tr>
 
 
@@ -518,6 +518,42 @@
 
 
 
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> transform</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>transform(T: any)</code>
+                        </td>
+                    </tr>
+    
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/components/estados/estados.component.ts:56</a></div>
+                            </td>
+                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code><a href="../classes/Estado.html" target="_self" >Estado</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
     <section>
         
@@ -544,6 +580,26 @@
                         </tr>
                 </tbody>
             </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> pattern</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>pattern:     <code>string</code>
+    </bcode>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/components/estados/estados.component.ts:54</a></div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
     </section>
 </div>
 
@@ -558,7 +614,7 @@ import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
   selector: &#x27;estados&#x27;,
   template: &#x60;
     &lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;value&quot; id&#x3D;&quot;{{id}}&quot;&gt;
-      &lt;option value&#x3D;&quot;&quot; disabled selected&gt;{{placeholder}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;null&quot; disabled selected&gt;{{placeholder}}&lt;/option&gt;
       &lt;option *ngFor&#x3D;&quot;let estado of estados&quot; [ngValue]&#x3D;&quot;estado.sigla&quot;&gt;{{estado.descricao}}&lt;/option&gt;
     &lt;/select&gt;&#x60;,
   providers: [{
@@ -602,6 +658,11 @@ export class EstadosComponent extends ValueAccessorBase&lt;Estado&gt; {
     new Estado(&#x27;TO&#x27;, &#x27;Tocantins&#x27;),
   ];
 
+  pattern: string;
+
+  transform(T): Estado {
+    return undefined;
+  }
 }
 </code></pre>
     </div>
@@ -630,7 +691,7 @@ export class EstadosComponent extends ValueAccessorBase&lt;Estado&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><select class="form-control" [(ngModel)]="value" id="{{id}}">  <option value="" disabled selected>{{placeholder}}</option>  <option *ngFor="let estado of estados" [ngValue]="estado.sigla">{{estado.descricao}}</option></select></div>'
+        var COMPONENT_TEMPLATE = '<div><select class="form-control" [(ngModel)]="value" id="{{id}}">  <option value="null" disabled selected>{{placeholder}}</option>  <option *ngFor="let estado of estados" [ngValue]="estado.sigla">{{estado.descricao}}</option></select></div>'
     var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'validacao-cnpj'},{'name': 'ValidacaoCpfComponent', 'selector': 'validacao-cpf'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'EstadosComponent'};

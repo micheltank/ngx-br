@@ -456,6 +456,109 @@
                     </tbody>
                 </table>
         </section>
+        <h4><code>src/components/constants.ts</code></h4>
+        <section>
+                    <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <b> telefonePattern</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <code>telefonePattern:     <code></code>
+        </bcode>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <i>Default value: </i><code>(99) 9 9999-9999</code>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <b> horaPattern</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <code>horaPattern:     <code></code>
+        </bcode>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <i>Default value: </i><code>99:99</code>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <b> cpfPattern</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <code>cpfPattern:     <code></code>
+        </bcode>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <i>Default value: </i><code>999.999.999-99</code>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <b> cnpjPattern</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <code>cnpjPattern:     <code></code>
+        </bcode>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <i>Default value: </i><code>99.999.999/9999-99</code>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <b> cepPattern</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <code>cepPattern:     <code></code>
+        </bcode>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <i>Default value: </i><code>99999-999</code>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+        </section>
         <h4><code>src/components/cpf/cpf.mask.directive.ts</code></h4>
         <section>
                     <table class="table table-sm table-bordered">
@@ -546,7 +649,7 @@
                     </tbody>
                 </table>
         </section>
-        <h4><code>src/pipes/cnpj.pipe.ts</code></h4>
+        <h4><code>src/components/value-acessor-base.ts</code></h4>
         <section>
                     <table class="table table-sm table-bordered">
                     <tbody>
@@ -563,24 +666,22 @@
                         </tr>
                     </tbody>
                 </table>
-                <table class="table table-sm table-bordered">
+        </section>
+        <h4><code>src/pipes/cnpj.pipe.ts</code></h4>
+        <section>
+                    <table class="table table-sm table-bordered">
                     <tbody>
                         <tr>
                             <td class="col-md-4">
-                                <b> cnpjPattern</b>
+                                <b> vanillaMasker</b>
                             </td>
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <code>cnpjPattern:     <code></code>
+                                <code>vanillaMasker:     <code></code>
         </bcode>
                             </td>
                         </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <i>Default value: </i><code>99.999.999/9999-99</code>
-                                </td>
-                            </tr>
                     </tbody>
                 </table>
         </section>
@@ -599,46 +700,6 @@
         </bcode>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-                <table class="table table-sm table-bordered">
-                    <tbody>
-                        <tr>
-                            <td class="col-md-4">
-                                <b> cpfPattern</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <code>cpfPattern:     <code></code>
-        </bcode>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <i>Default value: </i><code>999.999.999-99</code>
-                                </td>
-                            </tr>
-                    </tbody>
-                </table>
-                <table class="table table-sm table-bordered">
-                    <tbody>
-                        <tr>
-                            <td class="col-md-4">
-                                <b> cnpjPattern</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <code>cnpjPattern:     <code></code>
-        </bcode>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <i>Default value: </i><code>99.999.999/9999-99</code>
-                                </td>
-                            </tr>
                     </tbody>
                 </table>
                 <table class="table table-sm table-bordered">
@@ -677,26 +738,6 @@
         </bcode>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-                <table class="table table-sm table-bordered">
-                    <tbody>
-                        <tr>
-                            <td class="col-md-4">
-                                <b> cpfPattern</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <code>cpfPattern:     <code></code>
-        </bcode>
-                            </td>
-                        </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <i>Default value: </i><code>999.999.999-99</code>
-                                </td>
-                            </tr>
                     </tbody>
                 </table>
         </section>
