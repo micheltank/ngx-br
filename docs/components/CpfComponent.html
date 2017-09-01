@@ -460,7 +460,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input&nbsp;type&#x3D;&quot;text&quot;&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;maxlength&#x3D;&quot;14&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder&#x3D;&quot;{{placeholder}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;&nbsp;cpfMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input&nbsp;type&#x3D;&quot;text&quot;&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;maxlength&#x3D;&quot;14&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder&#x3D;&quot;{{placeholder}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;&nbsp;cpfMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;&gt;</code></td>
             </tr>
 
 
@@ -486,7 +486,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/components/cpf/cpf.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/components/cpf/cpf.component.ts:25</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -506,7 +506,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/components/cpf/cpf.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/components/cpf/cpf.component.ts:24</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -528,7 +528,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/cpf/cpf.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/cpf/cpf.component.ts:27</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -556,7 +556,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/cpf/cpf.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/cpf/cpf.component.ts:29</a></div>
                             </td>
                         </tr>
     
@@ -589,7 +589,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/components/cpf/cpf.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/components/cpf/cpf.component.ts:33</a></div>
                             </td>
                         </tr>
     
@@ -631,7 +631,7 @@
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/components/cpf/cpf.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/components/cpf/cpf.component.ts:22</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -650,7 +650,8 @@ import {cpfPattern} from &quot;../constants&quot;;
   selector: &#x27;cpf&#x27;,
   template: &#x60;
     &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; maxlength&#x3D;&quot;14&quot; id&#x3D;&quot;{{id}}&quot;
-           placeholder&#x3D;&quot;{{placeholder}}&quot;
+           placeholder&#x3D;&quot;{{placeholder}}&quot; 
+           disabled&#x3D;&quot;{{disabled}}&quot;
            [(ngModel)]&#x3D;&quot;value&quot; cpfMask
            (ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;
            (blur)&#x3D;&quot;blurEvt($event)&quot;&gt;&#x60;,
@@ -703,7 +704,7 @@ export class CpfComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input type="text" class="form-control" maxlength="14" id="{{id}}"       placeholder="{{placeholder}}"       [(ngModel)]="value" cpfMask       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt($event)"></div>'
+        var COMPONENT_TEMPLATE = '<div><input type="text" class="form-control" maxlength="14" id="{{id}}"       placeholder="{{placeholder}}"       disabled="{{disabled}}"       [(ngModel)]="value" cpfMask       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt($event)"></div>'
     var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'validacao-cnpj'},{'name': 'ValidacaoCpfComponent', 'selector': 'validacao-cpf'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'CpfComponent'};
