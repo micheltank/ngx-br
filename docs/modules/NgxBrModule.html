@@ -89,6 +89,9 @@
                                     <a href="../components/CpfComponent.html" >CpfComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/DinheiroComponent.html" >DinheiroComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +128,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
@@ -278,6 +284,9 @@
                                            <a href="../components/CpfComponent.html" >CpfComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/DinheiroComponent.html" >DinheiroComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                        </li>
                                        <li class="link">
@@ -314,6 +323,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
@@ -450,6 +462,9 @@
                                 <a href="../components/HoraComponent.html">HoraComponent</a>
                             </li>
                             <li class="list-group-item">
+                                <a href="../components/DinheiroComponent.html">DinheiroComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                 <a href="../pipes/CpfPipe.html">CpfPipe</a>
                             </li>
                             <li class="list-group-item">
@@ -475,6 +490,9 @@
                             </li>
                             <li class="list-group-item">
                                 <a href="../directives/HoraMaskDirective.html">HoraMaskDirective</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="../directives/DinheiroMaskDirective.html">DinheiroMaskDirective</a>
                             </li>
                     </ul>
                 </div>
@@ -506,6 +524,9 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                             </li>
                             <li class="list-group-item">
+                                    <a href="../components/DinheiroComponent.html" >DinheiroComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                     <a href="../pipes/CnpjPipe.html" >CnpjPipe</a>
                             </li>
                             <li class="list-group-item">
@@ -531,6 +552,9 @@
                             </li>
                             <li class="list-group-item">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                            </li>
+                            <li class="list-group-item">
+                                    <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                             </li>
                     </ul>
                 </div>
@@ -558,6 +582,8 @@ import {HoraMaskDirective} from &quot;./components/hora/hora.mask.directive&quot
 import {ValidacaoCpfComponent} from &quot;./components/cpf/cpf.component.container&quot;;
 import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.container&quot;;
 import {TelefonePipe} from &quot;./pipes/telefone.pipe&quot;;
+import {DinheiroMaskDirective} from &quot;./components/dinheiro/dinheiro.mask.directive&quot;;
+import {DinheiroComponent} from &quot;./components/dinheiro/dinheiro.component&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
@@ -576,6 +602,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CepComponent,
     EstadosComponent,
     HoraComponent,
+    DinheiroComponent,
 
     //Pipes
     CpfPipe,
@@ -588,7 +615,8 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CnpjMaskDirective,
     CepMaskDirective,
     TelefoneMaskDirective,
-    HoraMaskDirective
+    HoraMaskDirective,
+    DinheiroMaskDirective
   ],
   exports: [
     // Components
@@ -600,6 +628,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CepComponent,
     EstadosComponent,
     HoraComponent,
+    DinheiroComponent,
 
     //Pipes
     CnpjPipe,
@@ -612,7 +641,8 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CnpjMaskDirective,
     CepMaskDirective,
     TelefoneMaskDirective,
-    HoraMaskDirective
+    HoraMaskDirective,
+    DinheiroMaskDirective
   ],
   providers: [
     CnpjPipe,

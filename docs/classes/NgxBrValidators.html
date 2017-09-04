@@ -89,6 +89,9 @@
                                     <a href="../components/CpfComponent.html" >CpfComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/DinheiroComponent.html" >DinheiroComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                 </li>
                                 <li class="link">
@@ -125,6 +128,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
@@ -278,6 +284,9 @@
                                            <a href="../components/CpfComponent.html" >CpfComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/DinheiroComponent.html" >DinheiroComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/EstadosComponent.html" >EstadosComponent</a>
                                        </li>
                                        <li class="link">
@@ -314,6 +323,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
@@ -463,7 +475,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/ngx-br-validators.ts:28</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/ngx-br-validators.ts:29</a></div>
                                     </td>
                                 </tr>
                             <tr>
@@ -494,12 +506,43 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/ngx-br-validators.ts:23</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/ngx-br-validators.ts:24</a></div>
                                     </td>
                                 </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-description"><p>Validator that requires controls to match a valid CPF number.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Static</span> dinheiroRequired</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-export"></span><code>dinheiroRequired:     <code>() &#x3D;&gt; ValidatorFn</code>
+            </bcode>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Default value: </i><code>dinheiroValidationFn</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/ngx-br-validators.ts:39</a></div>
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Validator that requires controls to match a number bigger than zero</p>
             </div>
                                 </td>
                             </tr>
@@ -525,7 +568,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/ngx-br-validators.ts:33</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/ngx-br-validators.ts:34</a></div>
                                     </td>
                                 </tr>
                             <tr>
@@ -539,10 +582,11 @@
             </section>
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import {cnpjValidationFn} from &quot;./components/cnpj/cnpj.validator&quot;;
-import {cpfValidationFn} from &quot;./components/cpf/cpf.validator&quot;;
-import {horaValidationFn} from &quot;./components/hora/hora.validator&quot;;
+        <pre class="line-numbers"><code class="language-typescript">import {cnpjValidationFn} from &quot;./validators/cnpj.validator&quot;;
+import {cpfValidationFn} from &quot;./validators/cpf.validator&quot;;
+import {horaValidationFn} from &quot;./validators/hora.validator&quot;;
 import {ValidatorFn} from &quot;@angular/forms&quot;;
+import {dinheiroValidationFn} from &quot;./validators/dinheiro.required.validator&quot;;
 
 /**
  * Provides a set of Brazilian validators used by form controls.
@@ -572,6 +616,11 @@ export class NgxBrValidators {
    * Validator that requires controls to match a valid HH:MM Hour
    */
   static hora: () &#x3D;&gt; ValidatorFn &#x3D; horaValidationFn;
+
+  /**
+   * Validator that requires controls to match a number bigger than zero
+   */
+  static dinheiroRequired: () &#x3D;&gt; ValidatorFn &#x3D; dinheiroValidationFn;
 
 }
 </code></pre>
