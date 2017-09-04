@@ -543,8 +543,8 @@ import {CnpjPipe} from &quot;./pipes/cnpj.pipe&quot;;
 import {EstadosComponent} from &quot;./components/estados/estados.component&quot;;
 import {HoraComponent} from &quot;./components/hora/hora.component&quot;;
 import {HoraMaskDirective} from &quot;./components/hora/hora.mask.directive&quot;;
-import {ValidacaoCpfComponent} from &quot;./components/cpf/cpf.component.validacao&quot;;
-import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.validacao&quot;;
+import {ValidacaoCpfComponent} from &quot;./components/cpf/cpf.component.container&quot;;
+import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.container&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
@@ -598,6 +598,11 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CepMaskDirective,
     TelefoneMaskDirective,
     HoraMaskDirective
+  ],
+  providers: [
+    CnpjPipe,
+    CpfPipe,
+    CpfCnpjPipe
   ]
 })
 export class NgxBrModule {

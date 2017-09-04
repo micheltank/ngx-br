@@ -414,7 +414,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/components/cpf/cpf.component.validacao.ts</code>
+    <code>src/components/cpf/cpf.component.container.ts</code>
 </p>
 
 
@@ -439,14 +439,14 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>validacao-cpf</code></td>
+                <td class="col-md-9"><code>cpf-container</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;span&nbsp;*ngIf&#x3D;&quot;shouldShowErrors()&quot;&nbsp;style&#x3D;&quot;color:&nbsp;#f05050&quot;&gt;<br>&nbsp;&nbsp;&lt;span&nbsp;*ngIf&#x3D;&quot;control.hasError(&#x27;required&#x27;)&quot;&gt;{{requiredMsg}}&lt;/span&gt;<br>&nbsp;&nbsp;&lt;span&nbsp;*ngIf&#x3D;&quot;!control.hasError(&#x27;required&#x27;)&nbsp;&amp;&amp;&nbsp;control.hasError(&#x27;cpf&#x27;)&quot;&gt;{{cpfMsg}}&lt;/span&gt;<br>&lt;/span&gt;<br></code></td>
+                <td class="col-md-9"><code>&lt;ng-content&gt;&lt;/ng-content&gt;<br>&lt;span&nbsp;*ngIf&#x3D;&quot;shouldShowErrors()&quot;&nbsp;style&#x3D;&quot;color:&nbsp;#f05050&quot;&gt;<br>&nbsp;&nbsp;&lt;span&nbsp;*ngIf&#x3D;&quot;control.hasError(&#x27;required&#x27;)&quot;&gt;{{requiredMsg}}&lt;/span&gt;<br>&nbsp;&nbsp;&lt;span&nbsp;*ngIf&#x3D;&quot;!control.hasError(&#x27;required&#x27;)&nbsp;&amp;&amp;&nbsp;control.hasError(&#x27;cpf&#x27;)&quot;&gt;{{cpfMsg}}&lt;/span&gt;<br>&lt;/span&gt;<br></code></td>
             </tr>
 
 
@@ -472,7 +472,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/components/cpf/cpf.component.validacao.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/components/cpf/cpf.component.container.ts:16</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -495,7 +495,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/components/cpf/cpf.component.validacao.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/components/cpf/cpf.component.container.ts:18</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -518,7 +518,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/components/cpf/cpf.component.validacao.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/components/cpf/cpf.component.container.ts:17</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -550,7 +550,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/components/cpf/cpf.component.validacao.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/components/cpf/cpf.component.container.ts:20</a></div>
                             </td>
                         </tr>
     
@@ -575,8 +575,9 @@
 import {FormControl} from &quot;@angular/forms&quot;;
 
 @Component({
-  selector: &#x27;validacao-cpf&#x27;,
+  selector: &#x27;cpf-container&#x27;,
   template: &#x60;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
     &lt;span *ngIf&#x3D;&quot;shouldShowErrors()&quot; style&#x3D;&quot;color: #f05050&quot;&gt;
       &lt;span *ngIf&#x3D;&quot;control.hasError(&#x27;required&#x27;)&quot;&gt;{{requiredMsg}}&lt;/span&gt;
       &lt;span *ngIf&#x3D;&quot;!control.hasError(&#x27;required&#x27;) &amp;&amp; control.hasError(&#x27;cpf&#x27;)&quot;&gt;{{cpfMsg}}&lt;/span&gt;
@@ -622,8 +623,8 @@ export class ValidacaoCpfComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><span *ngIf="shouldShowErrors()" style="color: #f05050">  <span *ngIf="control.hasError(\'required\')">{{requiredMsg}}</span>  <span *ngIf="!control.hasError(\'required\') && control.hasError(\'cpf\')">{{cpfMsg}}</span></span></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'validacao-cnpj'},{'name': 'ValidacaoCpfComponent', 'selector': 'validacao-cpf'}];
+        var COMPONENT_TEMPLATE = '<div><ng-content></ng-content><span *ngIf="shouldShowErrors()" style="color: #f05050">  <span *ngIf="control.hasError(\'required\')">{{requiredMsg}}</span>  <span *ngIf="!control.hasError(\'required\') && control.hasError(\'cpf\')">{{cpfMsg}}</span></span></div>'
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'ValidacaoCpfComponent'};
 </script>
