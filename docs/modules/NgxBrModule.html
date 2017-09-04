@@ -180,6 +180,9 @@
                                 <li class="link">
                                     <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -366,6 +369,9 @@
                                        <li class="link">
                                            <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -453,6 +459,9 @@
                                 <a href="../pipes/CpfCnpjPipe.html">CpfCnpjPipe</a>
                             </li>
                             <li class="list-group-item">
+                                <a href="../pipes/TelefonePipe.html">TelefonePipe</a>
+                            </li>
+                            <li class="list-group-item">
                                 <a href="../directives/CpfMaskDirective.html">CpfMaskDirective</a>
                             </li>
                             <li class="list-group-item">
@@ -506,6 +515,9 @@
                                     <a href="../pipes/CpfCnpjPipe.html" >CpfCnpjPipe</a>
                             </li>
                             <li class="list-group-item">
+                                    <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
+                            </li>
+                            <li class="list-group-item">
                                     <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
                             </li>
                             <li class="list-group-item">
@@ -545,6 +557,7 @@ import {HoraComponent} from &quot;./components/hora/hora.component&quot;;
 import {HoraMaskDirective} from &quot;./components/hora/hora.mask.directive&quot;;
 import {ValidacaoCpfComponent} from &quot;./components/cpf/cpf.component.container&quot;;
 import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.container&quot;;
+import {TelefonePipe} from &quot;./pipes/telefone.pipe&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
@@ -568,6 +581,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CpfPipe,
     CnpjPipe,
     CpfCnpjPipe,
+    TelefonePipe,
 
     //Directives
     CpfMaskDirective,
@@ -591,6 +605,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CnpjPipe,
     CpfPipe,
     CpfCnpjPipe,
+    TelefonePipe,
 
     //Directives
     CpfMaskDirective,
@@ -602,7 +617,8 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
   providers: [
     CnpjPipe,
     CpfPipe,
-    CpfCnpjPipe
+    CpfCnpjPipe,
+    TelefonePipe
   ]
 })
 export class NgxBrModule {
