@@ -187,6 +187,9 @@
                                     <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
+                                </li>
+                                <li class="link">
                                     <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                 </li>
                         </ul>
@@ -382,6 +385,9 @@
                                            <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                        </li>
                                </ul>
@@ -461,7 +467,7 @@
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/components/dinheiro/dinheiro.mask.directive.ts:9</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/components/dinheiro/dinheiro.mask.directive.ts:10</a></div>
                                     </td>
                                 </tr>
             
@@ -505,7 +511,7 @@
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/components/dinheiro/dinheiro.mask.directive.ts:9</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/components/dinheiro/dinheiro.mask.directive.ts:10</a></div>
                                     </td>
                                 </tr>
                         </tbody>
@@ -515,6 +521,7 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import {Directive, ElementRef} from &quot;@angular/core&quot;;
+import {dinheiroPatternConfig} from &quot;../constants&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
 
@@ -526,13 +533,7 @@ export class DinheiroMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement &#x3D; this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskMoney({
-      precision: 2,
-      separator: &#x27;,&#x27;,
-      delimiter: &#x27;.&#x27;,
-      unit: &#x27;R$&#x27;,
-      zeroCents: false
-    });
+    vanillaMasker(this.nativeElement).maskMoney(dinheiroPatternConfig);
   }
 }
 </code></pre>
