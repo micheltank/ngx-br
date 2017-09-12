@@ -648,7 +648,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-    <code>transform(T: any)</code>
+    <code>transform(value: string)</code>
                         </td>
                     </tr>
     
@@ -704,7 +704,7 @@
         <pre class="line-numbers"><code class="language-typescript">import {Component, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
 import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
-import {dinheiroPatternConfig, dinheiroPlaceholder} from &quot;../constants&quot;;
+import {dinheiroPlaceholder} from &quot;../constants&quot;;
 
 @Component({
   selector: &#x27;dinheiro&#x27;,
@@ -739,8 +739,8 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
     this.blur.emit(event);
   }
 
-  transform(T: any): string {
-    throw new Error(&quot;Method not implemented.&quot;);
+  transform(value: string): string {
+    return value;
   }
 }
 </code></pre>

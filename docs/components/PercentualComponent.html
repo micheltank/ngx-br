@@ -671,7 +671,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-    <code>transform(T: any)</code>
+    <code>transform(value: string)</code>
                         </td>
                     </tr>
     
@@ -763,8 +763,8 @@ export class PercentualComponent extends ValueAccessorBase&lt;string&gt; {
     this.blur.emit(event);
   }
 
-  transform(T: any): string {
-    throw new Error(&quot;Method not implemented.&quot;);
+  transform(value: string): string {
+    return value;
   }
 }
 </code></pre>
