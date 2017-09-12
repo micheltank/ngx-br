@@ -49,7 +49,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
                     (ngModelChange)="change($event)"></hora>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-4">
               <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
@@ -61,7 +61,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
               {{1.23 | dinheiro}}
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-3">
               <percentual [(ngModel)]="model.percentual" formControlName="percentual"></percentual>
@@ -70,15 +70,20 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
               {{form.get('percentual').hasError('percentualRequired')}}
             </div>
           </div>
-
+          
+          <div class="row">
+            <div class="col-md-3">
+              <peso [(ngModel)]="model.peso" [ngModelOptions]="{standalone: true}"></peso>
+            </div>
+          </div>
+          
         </div>
         <div class="col-md-5 form-group">
           <p>Formulário:</p>
           <pre>{{ form.value | json }}</pre>
         </div>
       </div>
-    </form>
-  `
+    </form>`
 })
 export class DemoComponent {
 
@@ -105,7 +110,14 @@ export class DemoComponent {
       this.model.cnpj = "98798798";
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
+      this.model.peso = 30.69;
     }, 1000)
+
+    setTimeout(() => {
+      this.model.dinheiro = 0;
+      this.model.percentual = 0;
+      this.model.peso = 0;
+    }, 4000);
   }
 
   public change(value: any) {
@@ -122,4 +134,5 @@ class Teste {
   cpf: string;
   dinheiro: number;
   percentual: number;
+  peso: number;
 }
