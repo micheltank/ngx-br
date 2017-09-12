@@ -101,6 +101,9 @@
                                     <a href="../components/PercentualComponent.html"  class="active" >PercentualComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -305,6 +308,9 @@
                                            <a href="../components/PercentualComponent.html"  class="active" >PercentualComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -496,7 +502,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;type&#x3D;&quot;text&quot;&nbsp;maxlength&#x3D;&quot;20&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;&nbsp;percentualMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;{{maxLength}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt()&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[disabled]&#x3D;&quot;disabled&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;suffix:&nbsp;&#x27;&nbsp;%&#x27;,&nbsp;prefix:&nbsp;&#x27;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;true&nbsp;}&quot;&gt;</code></td>
             </tr>
 
 
@@ -522,7 +528,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/percentual/percentual.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/components/percentual/percentual.component.ts:32</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -531,21 +537,21 @@
                 <tbody>
                     <tr>
                         <td class="col-md-2">
-                            <code>oneDotOnly</code>
+                            <code>maxLength</code>
                         </td>
                         <td class="col-md-10">
                               <p>
-                                <em>Type:</em>    <code>boolean</code>
+                                <em>Type:</em>    <code>number</code>
 
                               </p>
                             <p>
-                              <em>Default value: </em><code>false</code>
+                              <em>Default value: </em><code>11</code>
                             </p>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/components/percentual/percentual.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/percentual/percentual.component.ts:30</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -568,7 +574,27 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/components/percentual/percentual.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/components/percentual/percentual.component.ts:31</a></div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>style</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/percentual/percentual.component.ts:29</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -590,7 +616,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/percentual/percentual.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/components/percentual/percentual.component.ts:34</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -603,36 +629,6 @@
             <h3 id="methods">
                 Methods
             </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> transform</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>transform(value: string)</code>
-                        </td>
-                    </tr>
-    
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/percentual/percentual.component.ts:30</a></div>
-                            </td>
-                        </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>string</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -651,7 +647,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/components/percentual/percentual.component.ts:37</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/components/percentual/percentual.component.ts:36</a></div>
                             </td>
                         </tr>
     
@@ -660,6 +656,36 @@
     
                                 <div class="io-description">
                                     <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> transform</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>transform(T: any)</code>
+                        </td>
+                    </tr>
+    
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/components/percentual/percentual.component.ts:40</a></div>
+                            </td>
+                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>string</code>
     
                                 </div>
                         </td>
@@ -682,18 +708,13 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>pattern:     <code>any</code>
+                            <code>pattern:     <code>string</code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Default value: </i><code>percentualPatternConfig</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/components/percentual/percentual.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/percentual/percentual.component.ts:27</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -706,17 +727,22 @@
         <pre class="line-numbers"><code class="language-typescript">import {Component, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
 import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
-import {percentualPatternConfig, percentualPlaceholder} from &quot;../constants&quot;;
-import {removeNonDigitValues} from &quot;../utils&quot;;
-
-const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
+import {percentualPlaceholder} from &quot;../constants&quot;;
 
 @Component({
   selector: &#x27;percentual&#x27;,
   template: &#x60;
-    &lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; maxlength&#x3D;&quot;20&quot; id&#x3D;&quot;{{id}}&quot; disabled&#x3D;&quot;{{disabled}}&quot;
-           [placeholder]&#x3D;&quot;placeholder&quot; [(ngModel)]&#x3D;&quot;value&quot; percentualMask
-           (ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;&gt;&#x60;,
+    &lt;input class&#x3D;&quot;form-control&quot; 
+           currencyMask
+           maxlength&#x3D;&quot;{{maxLength}}&quot;
+           id&#x3D;&quot;{{id}}&quot;
+           (blur)&#x3D;&quot;blurEvt()&quot;
+           [disabled]&#x3D;&quot;disabled&quot;
+           [placeholder]&#x3D;&quot;placeholder&quot;
+           [(ngModel)]&#x3D;&quot;value&quot;
+           (ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;
+           [ngStyle]&#x3D;&quot;style&quot;
+           [options]&#x3D;&quot;{ suffix: &#x27; %&#x27;, prefix: &#x27;&#x27;, thousands: &#x27;.&#x27;, decimal: &#x27;,&#x27;, allowNegative: true }&quot;&gt;&#x60;,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() &#x3D;&gt; PercentualComponent),
@@ -724,23 +750,21 @@ const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
   }]
 })
 export class PercentualComponent extends ValueAccessorBase&lt;string&gt; {
-  pattern: any &#x3D; percentualPatternConfig;
+  pattern: string;
 
+  @Input() style: any;
+  @Input() maxLength: number &#x3D; 11;
   @Input() placeholder: string &#x3D; percentualPlaceholder;
-  @Input() oneDotOnly: boolean &#x3D; false;
   @Input() id: string;
 
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
-  transform(value: string): string {
-    let cleanValue &#x3D; removeNonDigitValues(vanillaMasker.toMoney(value, percentualPatternConfig));
-    let valueLenght &#x3D; cleanValue.length;
-
-    return cleanValue.slice(0, valueLenght - 1) + &#x27;.&#x27; + cleanValue.slice(valueLenght - 1, valueLenght);
-  }
-
   public blurEvt(event): void {
     this.blur.emit(event);
+  }
+
+  transform(T: any): string {
+    throw new Error(&quot;Method not implemented.&quot;);
   }
 }
 </code></pre>
@@ -770,8 +794,8 @@ export class PercentualComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input class="form-control" type="text" maxlength="20" id="{{id}}" disabled="{{disabled}}"       [placeholder]="placeholder" [(ngModel)]="value" percentualMask       (ngModelChange)="notifyChanges($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
+        var COMPONENT_TEMPLATE = '<div><input class="form-control"       currencyMask       maxlength="{{maxLength}}"       id="{{id}}"       (blur)="blurEvt()"       [disabled]="disabled"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       [ngStyle]="style"       [options]="{ suffix: \' %\', prefix: \'\', thousands: \'.\', decimal: \',\', allowNegative: true }"></div>'
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'PesoComponent', 'selector': 'peso'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'PercentualComponent'};
 </script>

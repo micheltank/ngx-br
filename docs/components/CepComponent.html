@@ -101,6 +101,9 @@
                                     <a href="../components/PercentualComponent.html" >PercentualComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -303,6 +306,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PesoComponent.html" >PesoComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
@@ -740,7 +746,7 @@ export class CepComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><input class="form-control" type="text" maxlength="9"       id="{{id}}" placeholder="{{placeholder}}"       disabled="{{disabled}}"       [(ngModel)]="value" cepMask       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'PesoComponent', 'selector': 'peso'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'CepComponent'};
 </script>

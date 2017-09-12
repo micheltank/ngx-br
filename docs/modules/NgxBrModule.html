@@ -101,6 +101,9 @@
                                     <a href="../components/PercentualComponent.html" >PercentualComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -305,6 +308,9 @@
                                            <a href="../components/PercentualComponent.html" >PercentualComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -486,6 +492,9 @@
                                 <a href="../components/PercentualComponent.html">PercentualComponent</a>
                             </li>
                             <li class="list-group-item">
+                                <a href="../components/PesoComponent.html">PesoComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                 <a href="../pipes/CpfPipe.html">CpfPipe</a>
                             </li>
                             <li class="list-group-item">
@@ -557,6 +566,9 @@
                                     <a href="../components/PercentualComponent.html" >PercentualComponent</a>
                             </li>
                             <li class="list-group-item">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                            </li>
+                            <li class="list-group-item">
                                     <a href="../pipes/CnpjPipe.html" >CnpjPipe</a>
                             </li>
                             <li class="list-group-item">
@@ -623,13 +635,16 @@ import {DinheiroComponent} from &quot;./components/dinheiro/dinheiro.component&q
 import {DinheiroPipe} from &quot;./pipes/dinheiro.pipe&quot;;
 import {PercentualComponent} from &quot;./components/percentual/percentual.component&quot;;
 import {PercentualMaskDirective} from &quot;./components/percentual/percentual.mask.directive&quot;;
+import {CurrencyMaskModule} from &quot;ng2-currency-mask&quot;;
+import {PesoComponent} from &quot;./components/peso/peso.component&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    CurrencyMaskModule
   ],
   declarations: [
     // Components
@@ -643,6 +658,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     HoraComponent,
     DinheiroComponent,
     PercentualComponent,
+    PesoComponent,
 
     //Pipes
     CpfPipe,
@@ -672,6 +688,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     HoraComponent,
     DinheiroComponent,
     PercentualComponent,
+    PesoComponent,
 
     //Pipes
     CnpjPipe,
@@ -687,7 +704,10 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     TelefoneMaskDirective,
     HoraMaskDirective,
     DinheiroMaskDirective,
-    PercentualMaskDirective
+    PercentualMaskDirective,
+
+    //Modules
+    CurrencyMaskModule
   ],
   providers: [
     CnpjPipe,
