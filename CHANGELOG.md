@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/nbfontana/ngx-br/compare/v0.1.0...v0.1.1) (2017-09-12)
+
+
+### Bug Fixes
+
+* dinheiro writeValue pattern apply ([e146cc5](https://github.com/nbfontana/ngx-br/commit/e146cc5))
+* percentual writeValue pattern apply ([3cbd223](https://github.com/nbfontana/ngx-br/commit/3cbd223))
+
+
+
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/nbfontana/ngx-br/compare/v0.0.28...v0.1.0) (2017-09-11)
+
+
+### Features
+
+* percentual component and validator ([e85e3b9](https://github.com/nbfontana/ngx-br/commit/e85e3b9))
+
+
+
+<a name="0.0.28"></a>
+## [0.0.28](https://github.com/nbfontana/ngx-br/compare/v0.0.27...v0.0.28) (2017-09-06)
+
+
+### Bug Fixes
+
+* dinheiro pipe in providers ([aa3db51](https://github.com/nbfontana/ngx-br/commit/aa3db51))
+
+
+
 <a name="0.0.27"></a>
 ## [0.0.27](https://github.com/nbfontana/ngx-br/compare/v0.0.26...v0.0.27) (2017-09-06)
 

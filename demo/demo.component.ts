@@ -61,6 +61,15 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
               {{1.23 | dinheiro}}
             </div>
           </div>
+          
+          <div class="row">
+            <div class="col-md-3">
+              <percentual [(ngModel)]="model.percentual" formControlName="percentual"></percentual>
+            </div>
+            <div class="col-md-3">
+              {{form.get('percentual').hasError('percentualRequired')}}
+            </div>
+          </div>
 
         </div>
         <div class="col-md-5 form-group">
@@ -82,6 +91,7 @@ export class DemoComponent {
       cnpj: [null, NgxBrValidators.cnpj()],
       telefone: [null],
       cep: [null],
+      percentual: [null, NgxBrValidators.percentualRequired()],
       estado: [null],
       dinheiro: [null, NgxBrValidators.dinheiroRequired()],
       hora: [null, NgxBrValidators.hora()]
@@ -93,6 +103,8 @@ export class DemoComponent {
       this.model.cep = "88715000";
       this.model.telefone = "48999999999";
       this.model.cnpj = "98798798";
+      this.model.dinheiro = 150.78;
+      this.model.percentual = 15.9;
     }, 1000)
   }
 
@@ -109,4 +121,5 @@ class Teste {
   cnpj: string;
   cpf: string;
   dinheiro: number;
+  percentual: number;
 }
