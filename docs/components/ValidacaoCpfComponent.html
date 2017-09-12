@@ -98,6 +98,9 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -134,6 +137,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -296,6 +302,9 @@
                                            <a href="../components/HoraComponent.html" >HoraComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -332,6 +341,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -648,8 +660,8 @@ export class ValidacaoCpfComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><ng-content></ng-content><span *ngIf="shouldShowErrors()" style="color: #f05050">  <span *ngIf="control.hasError(\'required\')">{{requiredMsg}}</span>  <span *ngIf="!control.hasError(\'required\') && control.hasError(\'cpf\')">{{cpfMsg}}</span></span></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
-    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
+    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'ValidacaoCpfComponent'};
 </script>
 <script src="../js/tree.js"></script>

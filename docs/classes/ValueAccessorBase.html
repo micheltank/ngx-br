@@ -98,6 +98,9 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -134,6 +137,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -296,6 +302,9 @@
                                            <a href="../components/HoraComponent.html" >HoraComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -332,6 +341,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -534,7 +546,7 @@
             
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/components/value-acessor-base.ts:36</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/components/value-acessor-base.ts:48</a></div>
                                     </td>
                                 </tr>
             
@@ -564,7 +576,7 @@
             
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/components/value-acessor-base.ts:40</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/components/value-acessor-base.ts:52</a></div>
                                     </td>
                                 </tr>
             
@@ -594,7 +606,7 @@
             
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/components/value-acessor-base.ts:44</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/components/value-acessor-base.ts:56</a></div>
                                     </td>
                                 </tr>
             
@@ -624,7 +636,7 @@
             
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/components/value-acessor-base.ts:48</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/components/value-acessor-base.ts:60</a></div>
                                     </td>
                                 </tr>
             
@@ -654,7 +666,7 @@
             
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/components/value-acessor-base.ts:52</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/components/value-acessor-base.ts:64</a></div>
                                     </td>
                                 </tr>
             
@@ -726,7 +738,7 @@
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-"></span><code>pattern:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>pattern:     <code>any</code>
             </bcode>
                                 </td>
                             </tr>
@@ -773,7 +785,7 @@ export abstract class ValueAccessorBase&lt;T&gt; implements ControlValueAccessor
   public onTouched: any &#x3D; () &#x3D;&gt; {};
 
   abstract transform(T): T;
-  abstract pattern: string;
+  abstract pattern: any;
 
   private innerValue: T;
 
@@ -791,8 +803,20 @@ export abstract class ValueAccessorBase&lt;T&gt; implements ControlValueAccessor
     if (!this.pattern) {
       this.innerValue &#x3D; value;
     } else {
-      this.innerValue &#x3D; value ? vanillaMasker.toPattern(value, this.pattern) : value;
+      this.innerValue &#x3D; this.applyPattern(value);
     }
+  }
+
+  private applyPattern(value: T) {
+    if (!value) {
+      return &#x27;&#x27;;
+    }
+
+    if (typeof this.pattern &#x3D;&#x3D;&#x3D; &quot;string&quot;) {
+      return vanillaMasker.toPattern(value, this.pattern);
+    }
+
+    return vanillaMasker.toMoney(value, this.pattern);
   }
 
   registerOnChange(fn: any): void {

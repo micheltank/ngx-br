@@ -98,6 +98,9 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -134,6 +137,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -296,6 +302,9 @@
                                            <a href="../components/HoraComponent.html" >HoraComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -332,6 +341,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -510,7 +522,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:28</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -533,7 +545,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:27</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -556,7 +568,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:26</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -578,7 +590,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:30</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -606,7 +618,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:32</a></div>
                             </td>
                         </tr>
     
@@ -639,7 +651,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:43</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:44</a></div>
                             </td>
                         </tr>
     
@@ -670,13 +682,18 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>pattern:     <code>string</code>
+                            <code>pattern:     <code>any</code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:23</a></div>
+                                <i>Default value: </i><code>dinheiroPatternConfig</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:24</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -689,7 +706,8 @@
         <pre class="line-numbers"><code class="language-typescript">import {Component, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
 import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
-import {dinheiroPlaceholder} from &quot;../constants&quot;;
+import {dinheiroPatternConfig, dinheiroPlaceholder} from &quot;../constants&quot;;
+import {removeNonDigitValues} from &quot;../utils&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
 
@@ -708,7 +726,7 @@ const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
   }]
 })
 export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
-  pattern: string;
+  pattern: any &#x3D; dinheiroPatternConfig;
 
   @Input() placeholder: string &#x3D; dinheiroPlaceholder;
   @Input() oneDotOnly: boolean &#x3D; true;
@@ -717,9 +735,9 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
   transform(value: string): string {
-    let transformedValue &#x3D; this.removeNonDigitValues(value);
+    let transformedValue &#x3D; removeNonDigitValues(value);
     transformedValue &#x3D; vanillaMasker.toMoney(transformedValue);
-    transformedValue &#x3D; this.removeNonDigitValues(transformedValue);
+    transformedValue &#x3D; removeNonDigitValues(transformedValue);
 
     if (this.oneDotOnly) {
       return this.formatToOnly2Dots(transformedValue);
@@ -734,10 +752,6 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
 
   private formatToOnly2Dots(value: string): string {
     return value.slice(0, value.length - 2) + &quot;.&quot; + value.slice(value.length - 2)
-  }
-
-  private removeNonDigitValues(value: string): string {
-    return value ? value.replace(/[^\d]/g, &#x27;&#x27;).trim() : value
   }
 }
 </code></pre>
@@ -768,8 +782,8 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><input class="form-control" type="text" maxlength="20" id="{{id}}"       disabled="{{disabled}}" dinheiroMask       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
-    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
+    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'DinheiroComponent'};
 </script>
 <script src="../js/tree.js"></script>
