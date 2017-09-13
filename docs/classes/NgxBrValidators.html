@@ -98,6 +98,12 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -134,6 +140,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -296,6 +305,12 @@
                                            <a href="../components/HoraComponent.html" >HoraComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -332,6 +347,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -481,7 +499,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/ngx-br-validators.ts:29</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/ngx-br-validators.ts:30</a></div>
                                     </td>
                                 </tr>
                             <tr>
@@ -512,7 +530,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/ngx-br-validators.ts:24</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/ngx-br-validators.ts:25</a></div>
                                     </td>
                                 </tr>
                             <tr>
@@ -543,12 +561,12 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/ngx-br-validators.ts:39</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/ngx-br-validators.ts:40</a></div>
                                     </td>
                                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Validator that requires controls to match a number bigger than zero</p>
+                                    <div class="io-description"><p>Validator that requires controls to match a number bigger than zero (0.00) (0,00)</p>
             </div>
                                 </td>
                             </tr>
@@ -574,12 +592,43 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/ngx-br-validators.ts:34</a></div>
+                                        <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/ngx-br-validators.ts:35</a></div>
                                     </td>
                                 </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-description"><p>Validator that requires controls to match a valid HH:MM Hour</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Static</span> percentualRequired</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-export"></span><code>percentualRequired:     <code>() &#x3D;&gt; ValidatorFn</code>
+            </bcode>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Default value: </i><code>percentualValidationFn</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/ngx-br-validators.ts:45</a></div>
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Validator that requires controls to match a percent value bigger than zero (0.0)</p>
             </div>
                                 </td>
                             </tr>
@@ -593,6 +642,7 @@ import {cpfValidationFn} from &quot;./validators/cpf.validator&quot;;
 import {horaValidationFn} from &quot;./validators/hora.validator&quot;;
 import {ValidatorFn} from &quot;@angular/forms&quot;;
 import {dinheiroValidationFn} from &quot;./validators/dinheiro.required.validator&quot;;
+import {percentualValidationFn} from &quot;./validators/percentual.required.validator&quot;;
 
 /**
  * Provides a set of Brazilian validators used by form controls.
@@ -624,9 +674,14 @@ export class NgxBrValidators {
   static hora: () &#x3D;&gt; ValidatorFn &#x3D; horaValidationFn;
 
   /**
-   * Validator that requires controls to match a number bigger than zero
+   * Validator that requires controls to match a number bigger than zero (0.00) (0,00)
    */
   static dinheiroRequired: () &#x3D;&gt; ValidatorFn &#x3D; dinheiroValidationFn;
+
+  /**
+   * Validator that requires controls to match a percent value bigger than zero (0.0)
+   */
+  static percentualRequired: () &#x3D;&gt; ValidatorFn &#x3D; percentualValidationFn;
 
 }
 </code></pre>

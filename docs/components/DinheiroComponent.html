@@ -98,6 +98,12 @@
                                     <a href="../components/HoraComponent.html" >HoraComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                 </li>
                                 <li class="link">
@@ -134,6 +140,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -296,6 +305,12 @@
                                            <a href="../components/HoraComponent.html" >HoraComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/PercentualComponent.html" >PercentualComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PesoComponent.html" >PesoComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/TelefoneComponent.html" >TelefoneComponent</a>
                                        </li>
                                        <li class="link">
@@ -332,6 +347,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/TelefoneMaskDirective.html" >TelefoneMaskDirective</a>
@@ -484,7 +502,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;&nbsp;type&#x3D;&quot;text&quot;&nbsp;maxlength&#x3D;&quot;20&quot;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;&nbsp;dinheiroMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;20&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt()&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;prefix:&nbsp;&#x27;R$&nbsp;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;false&nbsp;}&quot;&gt;</code></td>
             </tr>
 
 
@@ -510,30 +528,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:27</a></div>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-2">
-                            <code>oneDotOnly</code>
-                        </td>
-                        <td class="col-md-10">
-                              <p>
-                                <em>Type:</em>    <code>boolean</code>
-
-                              </p>
-                            <p>
-                              <em>Default value: </em><code>true</code>
-                            </p>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:31</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -556,7 +551,27 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:30</a></div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <code>style</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:29</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -578,7 +593,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:33</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -591,36 +606,6 @@
             <h3 id="methods">
                 Methods
             </h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> transform</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>transform(value: string)</code>
-                        </td>
-                    </tr>
-    
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:31</a></div>
-                            </td>
-                        </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>string</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
@@ -639,7 +624,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:43</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:35</a></div>
                             </td>
                         </tr>
     
@@ -648,6 +633,36 @@
     
                                 <div class="io-description">
                                     <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> transform</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>transform(value: string)</code>
+                        </td>
+                    </tr>
+    
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:39</a></div>
+                            </td>
+                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>string</code>
     
                                 </div>
                         </td>
@@ -676,7 +691,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:27</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -691,16 +706,20 @@ import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
 import {dinheiroPlaceholder} from &quot;../constants&quot;;
 
-const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
-
 @Component({
   selector: &#x27;dinheiro&#x27;,
   template: &#x60;
-    &lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;text&quot; maxlength&#x3D;&quot;20&quot; id&#x3D;&quot;{{id}}&quot;
-           disabled&#x3D;&quot;{{disabled}}&quot; dinheiroMask
+    &lt;input class&#x3D;&quot;form-control&quot; 
+           maxlength&#x3D;&quot;20&quot; 
+           currencyMask
+           id&#x3D;&quot;{{id}}&quot;
+           disabled&#x3D;&quot;{{disabled}}&quot;
            [placeholder]&#x3D;&quot;placeholder&quot;
            [(ngModel)]&#x3D;&quot;value&quot;
-           (ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;&gt;&#x60;,
+           (ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;
+           (blur)&#x3D;&quot;blurEvt()&quot;
+           [ngStyle]&#x3D;&quot;style&quot;
+           [options]&#x3D;&quot;{ prefix: &#x27;R$ &#x27;, thousands: &#x27;.&#x27;, decimal: &#x27;,&#x27;, allowNegative: false }&quot;&gt;&#x60;,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() &#x3D;&gt; DinheiroComponent),
@@ -710,34 +729,18 @@ const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
 export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
   pattern: string;
 
+  @Input() style: any;
   @Input() placeholder: string &#x3D; dinheiroPlaceholder;
-  @Input() oneDotOnly: boolean &#x3D; true;
   @Input() id: string;
 
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
-
-  transform(value: string): string {
-    let transformedValue &#x3D; this.removeNonDigitValues(value);
-    transformedValue &#x3D; vanillaMasker.toMoney(transformedValue);
-    transformedValue &#x3D; this.removeNonDigitValues(transformedValue);
-
-    if (this.oneDotOnly) {
-      return this.formatToOnly2Dots(transformedValue);
-    }
-
-    return vanillaMasker.toMoney(transformedValue);
-  }
 
   public blurEvt(event): void {
     this.blur.emit(event);
   }
 
-  private formatToOnly2Dots(value: string): string {
-    return value.slice(0, value.length - 2) + &quot;.&quot; + value.slice(value.length - 2)
-  }
-
-  private removeNonDigitValues(value: string): string {
-    return value ? value.replace(/[^\d]/g, &#x27;&#x27;).trim() : value
+  transform(value: string): string {
+    return value;
   }
 }
 </code></pre>
@@ -767,9 +770,9 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input class="form-control" type="text" maxlength="20" id="{{id}}"       disabled="{{disabled}}" dinheiroMask       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"></div>'
-    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
-    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
+        var COMPONENT_TEMPLATE = '<div><input class="form-control"       maxlength="20"       currencyMask       id="{{id}}"       disabled="{{disabled}}"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt()"       [ngStyle]="style"       [options]="{ prefix: \'R$ \', thousands: \'.\', decimal: \',\', allowNegative: false }"></div>'
+    var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'PesoComponent', 'selector': 'peso'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
+    var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'DinheiroComponent'};
 </script>
 <script src="../js/tree.js"></script>
