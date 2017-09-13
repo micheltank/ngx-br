@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/nbfontana/ngx-br/compare/v0.2.0...v0.2.1) (2017-09-12)
+
+
+### Bug Fixes
+
+* transform method not implemented ([a8df98a](https://github.com/nbfontana/ngx-br/commit/a8df98a))
+
+
+
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/nbfontana/ngx-br/compare/v0.1.1...v0.2.0) (2017-09-12)
+
+
+### Features
+
+* dinheiro e percentual utilizando ng2-currency-mask ([42ebf7a](https://github.com/nbfontana/ngx-br/commit/42ebf7a))
+* peso component ([d1e33db](https://github.com/nbfontana/ngx-br/commit/d1e33db))
+
+
+
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/nbfontana/ngx-br/compare/v0.1.0...v0.1.1) (2017-09-12)
+
+
+### Bug Fixes
+
+* dinheiro writeValue pattern apply ([e146cc5](https://github.com/nbfontana/ngx-br/commit/e146cc5))
+* percentual writeValue pattern apply ([3cbd223](https://github.com/nbfontana/ngx-br/commit/3cbd223))
+
+
+
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/nbfontana/ngx-br/compare/v0.0.28...v0.1.0) (2017-09-11)
+
+
+### Features
+
+* percentual component and validator ([e85e3b9](https://github.com/nbfontana/ngx-br/commit/e85e3b9))
+
+
+
 <a name="0.0.28"></a>
 ## [0.0.28](https://github.com/nbfontana/ngx-br/compare/v0.0.27...v0.0.28) (2017-09-06)
 

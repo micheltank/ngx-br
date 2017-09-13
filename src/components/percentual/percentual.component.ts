@@ -1,33 +1,34 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {dinheiroPlaceholder} from "../constants";
+import {percentualPlaceholder} from "../constants";
 
 @Component({
-  selector: 'dinheiro',
+  selector: 'percentual',
   template: `
     <input class="form-control" 
-           maxlength="20" 
            currencyMask
+           maxlength="{{maxLength}}"
            id="{{id}}"
-           disabled="{{disabled}}"
+           (blur)="blurEvt()"
+           [disabled]="disabled"
            [placeholder]="placeholder"
            [(ngModel)]="value"
            (ngModelChange)="notifyChanges($event)"
-           (blur)="blurEvt()"
            [ngStyle]="style"
-           [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }">`,
+           [options]="{ suffix: ' %', prefix: '', thousands: '.', decimal: ',', allowNegative: true }">`,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => DinheiroComponent),
+    useExisting: forwardRef(() => PercentualComponent),
     multi: true
   }]
 })
-export class DinheiroComponent extends ValueAccessorBase<string> {
+export class PercentualComponent extends ValueAccessorBase<string> {
   pattern: string;
 
   @Input() style: any;
-  @Input() placeholder: string = dinheiroPlaceholder;
+  @Input() maxLength: number = 11;
+  @Input() placeholder: string = percentualPlaceholder;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();

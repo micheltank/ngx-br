@@ -49,7 +49,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
                     (ngModelChange)="change($event)"></hora>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-4">
               <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
@@ -62,14 +62,28 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             </div>
           </div>
 
+          <div class="row">
+            <div class="col-md-3">
+              <percentual [(ngModel)]="model.percentual" formControlName="percentual"></percentual>
+            </div>
+            <div class="col-md-3">
+              {{form.get('percentual').hasError('percentualRequired')}}
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-3">
+              <peso [(ngModel)]="model.peso" [ngModelOptions]="{standalone: true}"></peso>
+            </div>
+          </div>
+          
         </div>
         <div class="col-md-5 form-group">
           <p>Formulário:</p>
           <pre>{{ form.value | json }}</pre>
         </div>
       </div>
-    </form>
-  `
+    </form>`
 })
 export class DemoComponent {
 
@@ -82,6 +96,7 @@ export class DemoComponent {
       cnpj: [null, NgxBrValidators.cnpj()],
       telefone: [null],
       cep: [null],
+      percentual: [null, NgxBrValidators.percentualRequired()],
       estado: [null],
       dinheiro: [null, NgxBrValidators.dinheiroRequired()],
       hora: [null, NgxBrValidators.hora()]
@@ -93,7 +108,16 @@ export class DemoComponent {
       this.model.cep = "88715000";
       this.model.telefone = "48999999999";
       this.model.cnpj = "98798798";
+      this.model.dinheiro = 150.78;
+      this.model.percentual = 15.9;
+      this.model.peso = 30.69;
     }, 1000)
+
+    setTimeout(() => {
+      this.model.dinheiro = 0;
+      this.model.percentual = 0;
+      this.model.peso = 0;
+    }, 4000);
   }
 
   public change(value: any) {
@@ -109,4 +133,6 @@ class Teste {
   cnpj: string;
   cpf: string;
   dinheiro: number;
+  percentual: number;
+  peso: number;
 }

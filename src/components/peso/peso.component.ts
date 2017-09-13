@@ -1,33 +1,35 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {dinheiroPlaceholder} from "../constants";
+import {pesoPlaceholder} from "../constants";
 
 @Component({
-  selector: 'dinheiro',
+  selector: 'peso',
   template: `
-    <input class="form-control" 
-           maxlength="20" 
+    <input class="form-control"
+           placeholder="Kg 0,00"
            currencyMask
+           maxlength="{{maxLength}}"
            id="{{id}}"
-           disabled="{{disabled}}"
+           (blur)="blurEvt()"
+           [disabled]="disabled"
            [placeholder]="placeholder"
            [(ngModel)]="value"
            (ngModelChange)="notifyChanges($event)"
-           (blur)="blurEvt()"
            [ngStyle]="style"
-           [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }">`,
+           [options]="{ suffix: ' kg', prefix: '', thousands: '.', decimal: ',', allowNegative: false }">`,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => DinheiroComponent),
+    useExisting: forwardRef(() => PesoComponent),
     multi: true
   }]
 })
-export class DinheiroComponent extends ValueAccessorBase<string> {
+export class PesoComponent extends ValueAccessorBase<string> {
   pattern: string;
 
   @Input() style: any;
-  @Input() placeholder: string = dinheiroPlaceholder;
+  @Input() maxLength: number = 10;
+  @Input() placeholder: string = pesoPlaceholder;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
