@@ -502,7 +502,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder&#x3D;&quot;{{placeholder}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;{{maxLength}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt()&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[disabled]&#x3D;&quot;disabled&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;suffix:&nbsp;&#x27;&nbsp;kg&#x27;,&nbsp;prefix:&nbsp;&#x27;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;false&nbsp;}&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder&#x3D;&quot;{{placeholder}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;{{maxLength}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[disabled]&#x3D;&quot;disabled&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;suffix:&nbsp;&#x27;&nbsp;kg&#x27;,&nbsp;prefix:&nbsp;&#x27;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;false&nbsp;}&quot;&gt;</code></td>
             </tr>
 
 
@@ -737,7 +737,7 @@ import {pesoPlaceholder} from &quot;../constants&quot;;
            currencyMask
            maxlength&#x3D;&quot;{{maxLength}}&quot;
            id&#x3D;&quot;{{id}}&quot;
-           (blur)&#x3D;&quot;blurEvt()&quot;
+           (blur)&#x3D;&quot;blurEvt($event)&quot;
            [disabled]&#x3D;&quot;disabled&quot;
            [placeholder]&#x3D;&quot;placeholder&quot;
            [(ngModel)]&#x3D;&quot;value&quot;
@@ -795,7 +795,7 @@ export class PesoComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input class="form-control"       placeholder="{{placeholder}}"       currencyMask       maxlength="{{maxLength}}"       id="{{id}}"       (blur)="blurEvt()"       [disabled]="disabled"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       [ngStyle]="style"       [options]="{ suffix: \' kg\', prefix: \'\', thousands: \'.\', decimal: \',\', allowNegative: false }"></div>'
+        var COMPONENT_TEMPLATE = '<div><input class="form-control"       placeholder="{{placeholder}}"       currencyMask       maxlength="{{maxLength}}"       id="{{id}}"       (blur)="blurEvt($event)"       [disabled]="disabled"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       [ngStyle]="style"       [options]="{ suffix: \' kg\', prefix: \'\', thousands: \'.\', decimal: \',\', allowNegative: false }"></div>'
     var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'PesoComponent', 'selector': 'peso'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'PesoComponent'};
