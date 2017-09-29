@@ -196,9 +196,6 @@
                                     <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
-                                </li>
-                                <li class="link">
                                     <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                 </li>
                         </ul>
@@ -403,9 +400,6 @@
                                            <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                        </li>
                                </ul>
@@ -507,9 +501,6 @@
                                 <a href="../pipes/TelefonePipe.html">TelefonePipe</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="../pipes/DinheiroPipe.html">DinheiroPipe</a>
-                            </li>
-                            <li class="list-group-item">
                                 <a href="../directives/CpfMaskDirective.html">CpfMaskDirective</a>
                             </li>
                             <li class="list-group-item">
@@ -581,9 +572,6 @@
                                     <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                             </li>
                             <li class="list-group-item">
-                                    <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
-                            </li>
-                            <li class="list-group-item">
                                     <a href="../directives/CpfMaskDirective.html" >CpfMaskDirective</a>
                             </li>
                             <li class="list-group-item">
@@ -597,9 +585,6 @@
                             </li>
                             <li class="list-group-item">
                                     <a href="../directives/HoraMaskDirective.html" >HoraMaskDirective</a>
-                            </li>
-                            <li class="list-group-item">
-                                    <a href="../directives/DinheiroMaskDirective.html" >DinheiroMaskDirective</a>
                             </li>
                             <li class="list-group-item">
                                     <a href="../directives/PercentualMaskDirective.html" >PercentualMaskDirective</a>
@@ -632,11 +617,10 @@ import {ValidacaoCnpjComponent} from &quot;./components/cnpj/cnpj.component.cont
 import {TelefonePipe} from &quot;./pipes/telefone.pipe&quot;;
 import {DinheiroMaskDirective} from &quot;./components/dinheiro/dinheiro.mask.directive&quot;;
 import {DinheiroComponent} from &quot;./components/dinheiro/dinheiro.component&quot;;
-import {DinheiroPipe} from &quot;./pipes/dinheiro.pipe&quot;;
 import {PercentualComponent} from &quot;./components/percentual/percentual.component&quot;;
 import {PercentualMaskDirective} from &quot;./components/percentual/percentual.mask.directive&quot;;
-import {CurrencyMaskModule} from &quot;ng2-currency-mask&quot;;
 import {PesoComponent} from &quot;./components/peso/peso.component&quot;;
+import {NgxCurrencyModule} from &quot;ngx-currency&quot;;
 
 export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
 
@@ -644,7 +628,7 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
   imports: [
     CommonModule,
     FormsModule,
-    CurrencyMaskModule
+    NgxCurrencyModule
   ],
   declarations: [
     // Components
@@ -665,7 +649,6 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CnpjPipe,
     CpfCnpjPipe,
     TelefonePipe,
-    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,
@@ -695,7 +678,6 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CpfPipe,
     CpfCnpjPipe,
     TelefonePipe,
-    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,
@@ -703,18 +685,16 @@ export {NgxBrValidators} from &quot;./ngx-br-validators&quot;;
     CepMaskDirective,
     TelefoneMaskDirective,
     HoraMaskDirective,
-    DinheiroMaskDirective,
     PercentualMaskDirective,
 
     //Modules
-    CurrencyMaskModule
+    NgxCurrencyModule
   ],
   providers: [
     CnpjPipe,
     CpfPipe,
     CpfCnpjPipe,
-    TelefonePipe,
-    DinheiroPipe
+    TelefonePipe
   ]
 })
 export class NgxBrModule {

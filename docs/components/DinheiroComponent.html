@@ -196,9 +196,6 @@
                                     <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
-                                </li>
-                                <li class="link">
                                     <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                 </li>
                         </ul>
@@ -403,9 +400,6 @@
                                            <a href="../pipes/CpfPipe.html" >CpfPipe</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../pipes/DinheiroPipe.html" >DinheiroPipe</a>
-                                       </li>
-                                       <li class="link">
                                            <a href="../pipes/TelefonePipe.html" >TelefonePipe</a>
                                        </li>
                                </ul>
@@ -502,7 +496,7 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;20&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;prefix:&nbsp;&#x27;R$&nbsp;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;false&nbsp;}&quot;&gt;</code></td>
+                <td class="col-md-9"><code>&lt;input&nbsp;class&#x3D;&quot;form-control&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxlength&#x3D;&quot;20&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currencyMask<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&#x3D;&quot;{{id}}&quot;&nbsp;(keydown)&#x3D;&quot;onKeydown($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disabled&#x3D;&quot;{{disabled}}&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[placeholder]&#x3D;&quot;placeholder&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[(ngModel)]&#x3D;&quot;value&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ngModelChange)&#x3D;&quot;notifyChanges($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(blur)&#x3D;&quot;blurEvt($event)&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ngStyle]&#x3D;&quot;style&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[options]&#x3D;&quot;{&nbsp;prefix:&nbsp;&#x27;R$&nbsp;&#x27;,&nbsp;thousands:&nbsp;&#x27;.&#x27;,&nbsp;decimal:&nbsp;&#x27;,&#x27;,&nbsp;allowNegative:&nbsp;false&nbsp;}&quot;&gt;</code></td>
             </tr>
 
 
@@ -600,6 +594,24 @@
             </table>
     </section>
 
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(elementRef: <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank">ElementRef</a>)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:33</a></div>
+                            </td>
+                        </tr>
+    
+                </tbody>
+            </table>
+    </section>
 
     <section>
         
@@ -624,7 +636,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:35</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:39</a></div>
                             </td>
                         </tr>
     
@@ -654,7 +666,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:39</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:43</a></div>
                             </td>
                         </tr>
     
@@ -663,6 +675,36 @@
     
                                 <div class="io-description">
                                     <b>Returns: </b>    <code>string</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> onKeydown</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>onKeydown(event: any)</code>
+                        </td>
+                    </tr>
+    
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/components/dinheiro/dinheiro.component.ts:47</a></div>
+                            </td>
+                        </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
     
                                 </div>
                         </td>
@@ -701,7 +743,7 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import {Component, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
+        <pre class="line-numbers"><code class="language-typescript">import {Component, ElementRef, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
 import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
 import {dinheiroPlaceholder} from &quot;../constants&quot;;
@@ -709,10 +751,10 @@ import {dinheiroPlaceholder} from &quot;../constants&quot;;
 @Component({
   selector: &#x27;dinheiro&#x27;,
   template: &#x60;
-    &lt;input class&#x3D;&quot;form-control&quot; 
-           maxlength&#x3D;&quot;20&quot; 
+    &lt;input class&#x3D;&quot;form-control&quot;
+           maxlength&#x3D;&quot;20&quot;
            currencyMask
-           id&#x3D;&quot;{{id}}&quot;
+           id&#x3D;&quot;{{id}}&quot; (keydown)&#x3D;&quot;onKeydown($event)&quot;
            disabled&#x3D;&quot;{{disabled}}&quot;
            [placeholder]&#x3D;&quot;placeholder&quot;
            [(ngModel)]&#x3D;&quot;value&quot;
@@ -735,12 +777,22 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
 
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
 
+  constructor(private elementRef: ElementRef) {
+    super();
+  }
+
   public blurEvt(event): void {
     this.blur.emit(event);
   }
 
   transform(value: string): string {
     return value;
+  }
+
+  onKeydown(event) {
+    if (event.ctrlKey &amp;&amp; event.keyCode &#x3D;&#x3D;&#x3D; 65) {
+      console.log(this.elementRef);
+    }
   }
 }
 </code></pre>
@@ -770,7 +822,7 @@ export class DinheiroComponent extends ValueAccessorBase&lt;string&gt; {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><input class="form-control"       maxlength="20"       currencyMask       id="{{id}}"       disabled="{{disabled}}"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt($event)"       [ngStyle]="style"       [options]="{ prefix: \'R$ \', thousands: \'.\', decimal: \',\', allowNegative: false }"></div>'
+        var COMPONENT_TEMPLATE = '<div><input class="form-control"       maxlength="20"       currencyMask       id="{{id}}" (keydown)="onKeydown($event)"       disabled="{{disabled}}"       [placeholder]="placeholder"       [(ngModel)]="value"       (ngModelChange)="notifyChanges($event)"       (blur)="blurEvt($event)"       [ngStyle]="style"       [options]="{ prefix: \'R$ \', thousands: \'.\', decimal: \',\', allowNegative: false }"></div>'
     var COMPONENTS = [{'name': 'CepComponent', 'selector': 'cep'},{'name': 'CnpjComponent', 'selector': 'cnpj'},{'name': 'CpfComponent', 'selector': 'cpf'},{'name': 'DinheiroComponent', 'selector': 'dinheiro'},{'name': 'EstadosComponent', 'selector': 'estados'},{'name': 'HoraComponent', 'selector': 'hora'},{'name': 'PercentualComponent', 'selector': 'percentual'},{'name': 'PesoComponent', 'selector': 'peso'},{'name': 'TelefoneComponent', 'selector': 'telefone'},{'name': 'ValidacaoCnpjComponent', 'selector': 'cnpj-container'},{'name': 'ValidacaoCpfComponent', 'selector': 'cpf-container'}];
     var DIRECTIVES = [{'name': 'CepMaskDirective', 'selector': '[cepMask]'},{'name': 'CnpjMaskDirective', 'selector': '[cnpjMask]'},{'name': 'CpfMaskDirective', 'selector': '[cpfMask]'},{'name': 'DinheiroMaskDirective', 'selector': '[dinheiroMask]'},{'name': 'HoraMaskDirective', 'selector': '[horaMask]'},{'name': 'PercentualMaskDirective', 'selector': '[percentualMask]'},{'name': 'TelefoneMaskDirective', 'selector': '[telefoneMask]'}];
     var ACTUAL_COMPONENT = {'name': 'DinheiroComponent'};
