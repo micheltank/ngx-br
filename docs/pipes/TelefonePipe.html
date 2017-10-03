@@ -457,7 +457,7 @@
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import {Pipe, PipeTransform} from &quot;@angular/core&quot;;
-import {telefonePattern} from &quot;../components/constants&quot;;
+import {telefoneFixoPattern, telefoneCelularPattern} from &quot;../components/constants&quot;;
 
 const vanillaMasker &#x3D; require(&#x27;vanilla-masker&#x27;);
 
@@ -469,7 +469,7 @@ export class TelefonePipe implements PipeTransform {
     if (!value) {
       return &#x27;&#x27;;
     }
-
+    let telefonePattern: string &#x3D; value.toString().length &#x3D;&#x3D;&#x3D; 11 ? telefoneCelularPattern : telefoneFixoPattern;
     return vanillaMasker.toPattern(value, telefonePattern);
   }
 }

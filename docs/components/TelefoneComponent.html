@@ -522,7 +522,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/components/telefone/telefone.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/telefone/telefone.component.ts:26</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -539,13 +539,13 @@
 
                               </p>
                             <p>
-                              <em>Default value: </em><code>telefonePattern</code>
+                              <em>Default value: </em><code>telefoneFixoPattern</code>
                             </p>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/components/telefone/telefone.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/components/telefone/telefone.component.ts:25</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -567,7 +567,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/components/telefone/telefone.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/telefone/telefone.component.ts:28</a></div>
                             </td>
                         </tr>
                 </tbody>
@@ -595,7 +595,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/components/telefone/telefone.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/components/telefone/telefone.component.ts:30</a></div>
                             </td>
                         </tr>
     
@@ -628,7 +628,7 @@
     
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/components/telefone/telefone.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/components/telefone/telefone.component.ts:34</a></div>
                             </td>
                         </tr>
     
@@ -659,15 +659,10 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-circle"></span><code>pattern:     <code>string</code>
+                            <span class="modifier-icon fa fa-circle"></span><code>pattern:     <code>(value: any) &#x3D;&gt; string</code>
     </bcode>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value: </i><code>telefonePattern</code>
-                            </td>
-                        </tr>
                         <tr>
                             <td class="col-md-4">
                                 <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/components/telefone/telefone.component.ts:21</a></div>
@@ -683,7 +678,7 @@
         <pre class="line-numbers"><code class="language-typescript">import {Component, EventEmitter, forwardRef, Input, Output} from &quot;@angular/core&quot;;
 import {NG_VALUE_ACCESSOR} from &quot;@angular/forms&quot;;
 import {ValueAccessorBase} from &quot;../value-acessor-base&quot;;
-import {telefonePattern} from &quot;../constants&quot;;
+import {telefoneCelularPattern, telefoneFixoPattern} from &quot;../constants&quot;;
 
 @Component({
   selector: &#x27;telefone&#x27;,
@@ -700,9 +695,11 @@ import {telefonePattern} from &quot;../constants&quot;;
   }]
 })
 export class TelefoneComponent extends ValueAccessorBase&lt;string&gt; {
-  public pattern: string &#x3D; telefonePattern;
+  public pattern &#x3D; (value: any) : string &#x3D;&gt; {
+    return value.toString().length &#x3D;&#x3D;&#x3D; 11 ? telefoneCelularPattern : telefoneFixoPattern;
+  };
 
-  @Input() placeholder: string &#x3D; telefonePattern;
+  @Input() placeholder: string &#x3D; telefoneFixoPattern;
   @Input() id: string;
 
   @Output() blur: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
